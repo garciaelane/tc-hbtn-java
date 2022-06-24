@@ -1,12 +1,16 @@
 public class Numeros0a99 {
     public static void main(String[] args) {
-        for(int = 0; i < 100; i++) {
-            if(i == 99)
-                System.out.print(i + "\n");
-            else
-                System.out.print(i + ", ");
+
+        int num;
+        for(num = 0; num < 100; num++) {
+            if(num == 99) {
+                System.out.print(num + ", ");
+            }else {
+                System.out.print(num);
+            }
         }
 
     }
 }
+
 
