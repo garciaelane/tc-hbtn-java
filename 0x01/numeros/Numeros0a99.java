@@ -1,17 +1,15 @@
 public class Numeros0a99 {
     public static void main(String[] args) {
 
-        int num;
-        for(num = 0; num < 100; num++) {
-            if(num == 99) {
-                System.out.print(num + ", " );
-            }else {
-                System.out.println(num);
+        int num = 0;
+        while (num < 99) {
+                System.out.print(num++ + ", " );
             }
-        }
+                System.out.println(num);
 
     }
 }
+
 
 
 
