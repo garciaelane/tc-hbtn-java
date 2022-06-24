@@ -4,7 +4,7 @@ public class Numeros0a99 {
         int num;
         for(num = 0; num < 100; num++) {
             if(num == 99) {
-                System.out.print(num++ + ", " );
+                System.out.print(num + ", " );
             }else {
                 System.out.println(num);
             }
@@ -12,5 +12,6 @@ public class Numeros0a99 {
 
     }
 }
+
 
 
