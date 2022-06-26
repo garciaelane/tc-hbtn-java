@@ -1,5 +1,5 @@
 public class Numero {
-    public class void dividir(int a, int b) {
+    public static void dividir(int a, int b) {
         int resultadoDivisao = 0;
         try {
             resultadoDivisao = (a / b);
