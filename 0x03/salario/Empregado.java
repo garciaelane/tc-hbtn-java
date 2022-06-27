@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+import java.util.Locale;
 public class Empregado {
     double salarioFixo;
 
