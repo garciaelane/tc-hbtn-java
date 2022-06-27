@@ -10,7 +10,7 @@ public class Gerente extends Empregado {
             return (salarioFixo * 0.2 +
                     ((departamento.getValorAtingidoMeta()- departamento.getValorMeta()) * 0.01));
         } else{
-            return 0.00f;
+            return 0;
         }
     }
 }

@@ -1,5 +1,6 @@
 import java.text.NumberFormat;
 import java.util.Locale;
+
 public class Empregado {
     double salarioFixo;
 
@@ -15,7 +16,7 @@ public class Empregado {
         if (departamento.alcancouMeta()) {
             return salarioFixo * 0.1;
         } else {
-            return 0.00f;
+            return 0;
         }
 
     }
