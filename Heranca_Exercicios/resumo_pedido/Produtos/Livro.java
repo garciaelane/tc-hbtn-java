@@ -1,7 +1,5 @@
 package produtos;
 
-import resumo_pedido.Produtos.Produto;
-
 public class Livro extends Produto {
     public int paginas, edicao;
     public String autor;

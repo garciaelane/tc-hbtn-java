@@ -1,7 +1,5 @@
 package produtos;
 
-import resumo_pedido.Produtos.Produto;
-
 public class Dvd extends Produto {
     public String diretor, genero;
     public int duracao;
@@ -18,4 +16,3 @@ public class Dvd extends Produto {
         return this.precoBruto * 1.2;
     }
 }
-

@@ -1,5 +1,3 @@
-package resumo_pedido;
-
 import produtos.Produto;
 
 public class ItemPedido {
@@ -20,4 +18,3 @@ public class ItemPedido {
         return produto;
     }
 }
-

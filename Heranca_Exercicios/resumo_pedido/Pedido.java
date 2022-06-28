@@ -1,5 +1,3 @@
-import resumo_pedido.ItemPedido;
-
 public class Pedido {
 
     private double percentualDesconto;
@@ -42,4 +40,3 @@ public class Pedido {
         return valorStr.replace('.', ',');
     }
 }
-
