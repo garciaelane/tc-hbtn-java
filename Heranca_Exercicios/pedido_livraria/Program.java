@@ -1,12 +1,5 @@
-import java.util.Locale;
-
-import produtos.Produto;
-import resumo_pedido.Pedido;
-
 public class Program {
     public static void main(String[] args) {
-        Locale.setDefault(new Locale("pt", "BR"));
-
         produtos.Livro livro1 = new produtos.Livro("Duna", 2017, "Brasil", 56.30, 680, "Frank Herbert", 1);
         produtos.Livro livro2 = new produtos.Livro("Um de nós está mentindo", 2018, "Brasil", 34.93, 384,
                 "Karen Mcmanus", 1);
@@ -21,6 +14,7 @@ public class Program {
                 "Terror",
                 109);
 
+
         // Pedido 1
         ItemPedido[] itensPedido1 = new ItemPedido[] {
                 new ItemPedido(livro1, 1),
@@ -28,8 +22,11 @@ public class Program {
         };
 
         Pedido pedido1 = new Pedido(0, itensPedido1);
+        String totalPedido1 = Double.toString(pedido1.calcularTotal());
+        int index1 = totalPedido1.indexOf(".");
+        totalPedido1 = totalPedido1.substring(0, index1 + 3);
 
-        System.out.printf("Total Pedido: %.2f\n", pedido1.calcularTotal());
+        System.out.println("Total Pedido: " + totalPedido1.replace('.', ','));
 
 
         // Pedido 2
@@ -39,9 +36,11 @@ public class Program {
         };
 
         Pedido pedido2 = new Pedido(10, itensPedido2);
+        String totalPedido2 = Double.toString(pedido2.calcularTotal());
+        int index2 = totalPedido2.indexOf(".");
+        totalPedido2 = totalPedido2.substring(0, index2 + 3);
 
-        System.out.printf("Total Pedido: %.2f\n", pedido2.calcularTotal());
-
+        System.out.println("Total Pedido: " + totalPedido2.replace('.', ','));
 
         // Pedido 3
         ItemPedido[] itensPedido3 = new ItemPedido[] {
@@ -51,8 +50,11 @@ public class Program {
         };
 
         Pedido pedido3 = new Pedido(5, itensPedido3);
+        String totalPedido3 = Double.toString(pedido3.calcularTotal());
+        int index3 = totalPedido3.indexOf(".");
+        totalPedido3 = totalPedido3.substring(0, index3 + 3);
+        System.out.println("Total Pedido: " + totalPedido3.replace('.', ','));
 
-        System.out.printf("Total Pedido: %.2f\n", pedido3.calcularTotal());
 
         // Pedido 4
         ItemPedido[] itensPedido4 = new ItemPedido[] {
@@ -64,8 +66,9 @@ public class Program {
         };
 
         Pedido pedido4 = new Pedido(5, itensPedido4);
-
-        System.out.printf("Total Pedido: %.2f\n", pedido4.calcularTotal());
-
+        String totalPedido4 = Double.toString(pedido4.calcularTotal());
+        int index4 = totalPedido4.indexOf(".");
+        totalPedido4 = totalPedido4.substring(0, index3 + 3);
+        System.out.println("Total Pedido: " + totalPedido4.replace('.', ','));
     }
 }
