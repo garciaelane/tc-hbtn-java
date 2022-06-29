@@ -1,10 +1,10 @@
-package produtos;
+package resumo_pedido.produtos;
 
 public abstract class Produto {
     public int paginas, edicao;
     public String autor;
 
-    public Livro(String titulo, int ano, String pais, double precoBruto, int paginas, String autor, int edicao){
+    public Livro(String titulo, int ano, String pais, double precoBruto, int paginas, String autor, int edicao) {
         super(titulo, ano, pais, precoBruto);
         this.paginas = paginas;
         this.autor = autor;
@@ -12,10 +12,8 @@ public abstract class Produto {
     }
 
     @Override
-    public double obterPrecoLiquido(){
+    public double obterPrecoLiquido() {
         return this.precoBruto * 1.15;
     }
-
-
 
 }

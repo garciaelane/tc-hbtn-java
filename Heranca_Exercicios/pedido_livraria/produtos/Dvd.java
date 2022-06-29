@@ -1,10 +1,10 @@
-package produtos;
+package resumo_pedido.produtos;
 
-public class Dvd extends Produto {
+public class Dvd extends produtos.Produto {
     public String diretor, genero;
     public int duracao;
 
-    public Dvd(String titulo, int ano, String pais, double precoBruto, String diretor, String genero, int duracao){
+    public Dvd(String titulo, int ano, String pais, double precoBruto, String diretor, String genero, int duracao) {
         super(titulo, ano, pais, precoBruto);
         this.diretor = diretor;
         this.genero = genero;
@@ -12,7 +12,7 @@ public class Dvd extends Produto {
     }
 
 
-    public double obterPrecoLiquido(){
+    public double obterPrecoLiquido() {
         return this.precoBruto * 1.2;
     }
 }

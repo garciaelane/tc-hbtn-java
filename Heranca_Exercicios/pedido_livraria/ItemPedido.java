@@ -1,4 +1,4 @@
-import produtos.Produto;
+import resumo_pedido.produtos.Produto;
 
 public class ItemPedido {
 
