@@ -1,42 +1,58 @@
 public class Pedido {
 
     private double percentualDesconto;
-    public ItemPedido[] itens;
-    private double sum;
+    private ItemPedido[] itens;
+    private double total, total2;
+    private String tipo;
 
-    public Pedido(int percentualDesconto, ItemPedido[] itens){
+    public Pedido(int percentualDesconto, ItemPedido[] itens) {
+        super();
         this.percentualDesconto = percentualDesconto;
         this.itens = itens;
     }
 
-    public double calcularTotal(){
-        this.sum = 0.0;
-        for (ItemPedido item : itens) {
-            this.sum += item.getQuantidade() * item.getProduto().obterPrecoLiquido();
+    public double calcularTotal() {
+        for (ItemPedido itemPedido : itens) {
+            total += (itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())*itemPedido.getQuantidade());
         }
-        return this.sum * (1 - (this.percentualDesconto / 100));
+
+        return total - (total * percentualDesconto / 100 );
     }
 
     public void apresentarResumoPedido() {
+
         System.out.println("------- RESUMO PEDIDO -------");
-        for (ItemPedido pedido : this.itens) {
-            System.out.printf("Tipo: %s  Titulo: %s  Preco: %s  Quant: %s  Total: %s", pedido.getProduto().getClass().getSimpleName(),
-                    pedido.getProduto().getTitulo(),
-                    this.convertDouble(pedido.getProduto().obterPrecoLiquido()),
-                    pedido.getQuantidade(),
-                    this.convertDouble(pedido.getQuantidade() * pedido.getProduto().obterPrecoLiquido()) +"\n");
+        for (ItemPedido itemPedido : itens) {
+            total2 += (itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())* itemPedido.getQuantidade());
+
+            tipo = itemPedido.getProduto().getClass().getName();
+            System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n",tipo.replace("produtos.", "")
+                    ,itemPedido.getProduto().getTitulo()
+                    ,itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())
+                    ,itemPedido.getQuantidade()
+                    ,itemPedido.getProduto().obterPrecoLiquido(itemPedido.getProduto().getPrecoBruto())* itemPedido.getQuantidade());
         }
         System.out.println("----------------------------");
-        this.calcularTotal();
-        System.out.println("DESCONTO: " + this.convertDouble(this.sum * (this.percentualDesconto / 100.0)));
-        System.out.println("TOTAL PRODUTOS: " + this.convertDouble(this.sum));
+        System.out.printf("DESCONTO: %.2f\n", (total2 * percentualDesconto / 100));
+        System.out.printf("TOTAL PRODUTOS: %.2f\n", total2);
         System.out.println("----------------------------");
-        System.out.println("TOTAL PEDIDO: " + this.convertDouble(this.calcularTotal()));
+        System.out.printf("TOTAL PEDIDO: %.2f\n", calcularTotal());
         System.out.println("----------------------------");
     }
 
-    private String convertDouble(Double valor) {
-        String valorStr = String.format("%.2f", valor);
-        return valorStr.replace('.', ',');
+    public double getPercentualDesconto() {
+        return percentualDesconto;
+    }
+
+    public void setPercentualDesconto(int percentualDesconto) {
+        this.percentualDesconto = percentualDesconto;
+    }
+
+    public ItemPedido[] getItens() {
+        return itens;
+    }
+
+    public void setItens(ItemPedido[] itens) {
+        this.itens = itens;
     }
 }
