@@ -18,6 +18,8 @@ public abstract class Produto {
         return titulo;
     }
 
-    public Object getPrecoBruto() {
+    public void getPrecoBruto(double precoBruto) {
+        this.precoBruto = precoBruto;
     }
 }
+
