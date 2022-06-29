@@ -1,6 +1,6 @@
 package produtos;
 
-public class Livro extends Produto {
+public abstract class Produto {
     public int paginas, edicao;
     public String autor;
 

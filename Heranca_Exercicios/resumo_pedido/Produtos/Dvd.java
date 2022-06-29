@@ -1,5 +1,5 @@
 package produtos;
-public class Dvd extends Produto{
+public abstract class Produto {
 
     private String diretor;
     private String genero;
