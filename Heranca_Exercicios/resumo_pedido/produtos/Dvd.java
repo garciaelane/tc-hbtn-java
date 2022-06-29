@@ -1,9 +1,9 @@
 package produtos;
 
-public class Dvd extends produtos.Produto {
-    private String diretor ;
-    private String genero ;
-    private int duracao ;
+public class Dvd extends Produto{
+    private String diretor;
+    private String genero;
+    private int duracao;
 
     public Dvd(String titulo, int ano, String pais, double precoBruto, String diretor, String genero, int duracao) {
         super(titulo, ano, pais, precoBruto);
@@ -14,7 +14,9 @@ public class Dvd extends produtos.Produto {
 
     @Override
     public double obterPrecoLiquido() {
+
         return getPrecoBruto() * 1.20;
+
     }
 
     public String getDiretor() {
@@ -41,4 +43,3 @@ public class Dvd extends produtos.Produto {
         this.duracao = duracao;
     }
 }
-

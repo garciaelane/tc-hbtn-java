@@ -1,10 +1,10 @@
 package produtos;
 
 public abstract class Produto {
-    protected String titulo;
-    protected  String pais;
-    protected int ano;
-    protected double precoBruto;
+    protected String titulo ;
+    protected  String pais ;
+    protected int ano ;
+    protected double precoBruto ;
 
     public String getTitulo() {
         return titulo;
@@ -47,4 +47,3 @@ public abstract class Produto {
 
     public abstract  double obterPrecoLiquido();
 }
-
