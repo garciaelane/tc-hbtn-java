@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Set_Map.iml" filepath="$PROJECT_DIR$/.idea/Set_Map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/duplicados.iml" filepath="$PROJECT_DIR$/duplicados.iml" />
     </modules>
   </component>
 </project>
