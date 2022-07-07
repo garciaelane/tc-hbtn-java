@@ -1,7 +1,3 @@
-
-import workflow.TipoMensagem;
-import workflow.Video;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,5 +23,5 @@ public class ProcessadorVideo {
             canal.notificar(mensagem);
         }
     }
-
 }
+
