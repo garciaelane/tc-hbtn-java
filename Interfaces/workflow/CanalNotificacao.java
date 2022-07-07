@@ -1,3 +1,3 @@
 interface CanalNotificacao {
-    void notificar (Mensagem mensagem);
+    void notificar(Mensagem mensagem);
 }
