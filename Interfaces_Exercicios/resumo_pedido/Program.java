@@ -56,4 +56,3 @@ public class Program {
         System.out.printf("%s - %.2f\n", pedido4.getFrete().getTipoProvedorFrete(), pedido4.getFrete().getValor());
     }
 }
-S
