@@ -1,9 +1,9 @@
 import provedores.Frete;
 
 public class Pedido {
-    int codigo;
-    Double peso, total;
-    Frete frete;
+    private int codigo;
+    private double peso, total;
+    private Frete frete;
 
 
     public Pedido(int codigo, double peso, double total) {
