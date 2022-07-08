@@ -1,8 +1,8 @@
 package provedores;
 
 public class Frete {
-    TipoProvedorFrete tipoProvedorFrete;
-    Double valor;
+    private TipoProvedorFrete tipoProvedorFrete;
+    private double valor;
 
     public Frete(double valor, TipoProvedorFrete tipoProvedorFrete) {
         this.valor = valor;
@@ -10,11 +10,19 @@ public class Frete {
     }
 
     public double getValor() {
-        return this.valor;
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 
     public TipoProvedorFrete getTipoProvedorFrete() {
-        return this.tipoProvedorFrete;
+        return tipoProvedorFrete;
+    }
+
+    public void TipoProvedorFrete (TipoProvedorFrete tipoProvedorFrete) {
+        this.tipoProvedorFrete = tipoProvedorFrete;
     }
 
 }
