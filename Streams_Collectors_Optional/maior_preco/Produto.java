@@ -1,5 +1,3 @@
-package maior_preco;
-
 public class Produto {
 
 
