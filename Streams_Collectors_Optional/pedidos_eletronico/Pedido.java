@@ -26,4 +26,9 @@ public class Pedido {
     public Cliente getCliente() {
         return cliente;
     }
+
+    @Override
+    public String toString() {
+        return "[" + this.codigo + "] " + this.cliente.getNome();
+    }
 }
