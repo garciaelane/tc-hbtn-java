@@ -23,4 +23,10 @@ public class ConsultaPessoas {
         return listPessoas.stream().collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.groupingBy(Pessoa::getIdade, Collectors.counting())));
     }
 
+
+    public static Map<String, Double> obterMediaSalarioPorCargo (List<Pessoa> listPessoas){
+        return listPessoas.stream().collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.averagingDouble(Pessoa::getSalario)));
+    }
+
+
 }
